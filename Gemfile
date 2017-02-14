@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.3.1"
 
+gem 'react-rails'
 gem 'devise'
 gem 'active_model_serializers'
 gem 'httparty'
@@ -43,9 +44,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
-
-gem 'devise', '~> 4.1', '>= 4.1.1'
-
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
