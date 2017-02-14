@@ -6,4 +6,10 @@ Rails.application.routes.draw do
       get 'images'   => 'api#search'   # api/v1/images?seach=california
     end
   end
+  
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
+root to: 'home#index'
+
 end
