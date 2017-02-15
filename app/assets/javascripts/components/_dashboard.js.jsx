@@ -9,12 +9,9 @@ var Dashboard = React.createClass({
   render() {
     return(
       <div>
-        <h1> This is the Dashboard Component</h1>
-        <Navbar />
         <Carousel />
         <ListImages />
         <GoogleMap />
-        <Footer />
       </div>
     )
   }

@@ -1,3 +1,7 @@
-<h1>Hello</h1>
-
+<%= react_component "Navbar" %>
+<% if notice || alert %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+<% end %>
 <%= react_component "Dashboard"%>
+<%= react_component "Footer"%>
