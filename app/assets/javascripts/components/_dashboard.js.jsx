@@ -2,7 +2,7 @@
 var Dashboard = React.createClass({
   getInitialState() {
     return {
-      items: []
+      images: []
     }
   },
 
@@ -10,7 +10,6 @@ var Dashboard = React.createClass({
     return(
       <div>
         <h1> This is the Dashboard Component</h1>
-        <Navbar />
         <Carousel />
         <ListImages />
         <GoogleMap />
