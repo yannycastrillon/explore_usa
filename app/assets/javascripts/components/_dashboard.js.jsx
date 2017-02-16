@@ -12,6 +12,7 @@ var Dashboard = React.createClass({
         <Carousel />
         <ListImages />
         <GoogleMap />
+        <Canvas />
       </div>
     )
   }
