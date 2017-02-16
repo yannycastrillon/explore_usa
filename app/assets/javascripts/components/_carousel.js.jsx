@@ -1,7 +1,7 @@
-var Carousel = React.createClass({
+const Carousel = React.createClass({
 
 
-  render(){
+  render: function(){
     return(
       <div>
         <h2>This is Carousel Component</h2>
