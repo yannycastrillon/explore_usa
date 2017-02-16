@@ -1,7 +1,7 @@
 
-var SingleImage = React.createClass({
+const SingleImage = React.createClass({
 
-  modelContent: function(data){
+  modalContent: function(data){
     var $divModelContent = $("<div id='yanny'>")
     $divModelContent.append($("p").text(data.artist))
     $divModelContent.append($("p").text(data.artist_title))
@@ -26,7 +26,7 @@ var SingleImage = React.createClass({
       // <DetailImage />
       $('.modal-title').html(data.title)
       $('.modal-body').html(`<img src="${imgUrl}" />`)
-      $('.modal-body').append(this.modelContent(data))
+      $('.modal-body').append(this.modalContent(data))
       $('.modal').modal()
     })
   },

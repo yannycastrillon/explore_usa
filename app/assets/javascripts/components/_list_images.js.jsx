@@ -1,14 +1,3 @@
-var ListImages = React.createClass({
-  render(){
-    return(
-      <div>
-        <h2>This is List Images component - search</h2>
-          <h2>This is List Images component - search</h2>
-            <h2>This is List Images component - search</h2>
-        <SingleImage />
-      </div>
-    )
-
 const ListImages = React.createClass({
   getInitialState: function() {
     return {
@@ -64,8 +53,7 @@ const ListImages = React.createClass({
       $("#glyphicon-x").removeClass("glyphicon glyphicon-remove form-control-feedback")
       $(this.refs.term).removeAttr("aria-describedby","inputError2Status")
       $("#msg").remove()
-    }
-    else{
+    }else{
       $("#search-form").addClass("has-error has-feedback").append("<p id='msg' class='text-danger' style='display:inline;'>Enter a search value</p>")
       $("#glyphicon-x").addClass("glyphicon glyphicon-remove form-control-feedback")
       $(this.refs.term).attr("aria-describedby","inputError2Status")
