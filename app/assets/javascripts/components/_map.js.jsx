@@ -4,6 +4,7 @@ var GoogleMap = React.createClass({
       <div>
         <h3>This is GoogleMap Component</h3>
           <h3>This is GoogleMap Component</h3>
+      </div>
     )
   }
 })
