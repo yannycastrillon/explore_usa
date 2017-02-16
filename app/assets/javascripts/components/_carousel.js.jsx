@@ -1,5 +1,5 @@
-var Carousel = React.createClass({
-  render(){
+const Carousel = React.createClass({
+  render: function(){
     return(
 
       <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">

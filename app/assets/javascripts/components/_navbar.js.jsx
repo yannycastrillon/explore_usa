@@ -1,5 +1,5 @@
-var Navbar = React.createClass({
-  render(){
+const Navbar = React.createClass({
+  render: function(){
     return(
       <nav className="navbar navbar-default">
         <div className="container-fluid">
@@ -11,14 +11,14 @@ var Navbar = React.createClass({
               <span className="icon-bar"></span>
             </button>
             <a className="navbar-brand" href="#">
-            <h4 className="app-name">ExploreUSA</h4>
+              <h4 className="app-name">ExploreUSA</h4>
             </a>
           </div>
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav navbar-right">
-                <li><a href="/About">About</a></li>
-                <li><a href="/login">Log In</a></li>
-                <li><a href="/signup">Sign Up</a></li>
+              <li><a href="/About">About</a></li>
+              <li><a href="/login">Log In</a></li>
+              <li><a href="/signup">Sign Up</a></li>
             </ul>
           </div>
         </div>
