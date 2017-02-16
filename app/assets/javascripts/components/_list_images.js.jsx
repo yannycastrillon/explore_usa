@@ -1,23 +1,27 @@
-var ListImages = React.createClass({
+const ListImages = React.createClass({
+  getInitialState: function() {
+    return {
+      images: []
+    }
+  },
 
-  handleClick(e){
+  handleClick: function (e){
+    var self = this
      var searchTerm = this.refs.term.value.trim()
      if(!searchTerm) {
        return this.validateSearchField(e)
      }
+     // Get data from API
      $.getJSON('api/v1/images?phrase='+searchTerm, (response)=>{
        console.log(response);
-    })
+       // Sets API images to the state. Self is the actual component obj
+       self.setState({
+         images: response.data.images
+       })
+     })
   },
 
-  componentDidMount() {
-    setTimeout(function () {
-      console.log('Component mounted');
-
-    }, 1000);
-  },
-
-  render(){
+  render: function(){
     return(
       <section>
         <div className="row">
@@ -29,13 +33,21 @@ var ListImages = React.createClass({
             <button type="button" className="btn btn-info" onClick={this.handleClick}>Search</button>
           </div>
         </div>
-        <SingleImage />
+        <div>
+          <SingleImage images={this.state.images} />
+        </div>
       </section>
     )
   },
 
+  componentDidMount: function() {
+    setTimeout(function () {
+      console.log('Component mounted');
 
-  validateSearchField(e){
+    }, 1000);
+  },
+
+  validateSearchField: function(e){
     if (e.type == "change") {
       $("#search-form").removeClass("has-error has-feedback")
       $("#glyphicon-x").removeClass("glyphicon glyphicon-remove form-control-feedback")

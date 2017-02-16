@@ -10,9 +10,9 @@ class Api::V1::ApiController < ApplicationController
     success = true
     status = 200
     image = Factory.find_image(params[:id])
-    unless image.key?("ErrorCode")
+    if image.key?("ErrorCode")
       success = false
-      status = 401
+      status = 404
     end
       render json: {data: image, success:success}, status:status
   end
@@ -27,5 +27,16 @@ class Api::V1::ApiController < ApplicationController
       status = 404
     end
     render json: {data: images, success:success}, status:status
+  end
+
+  def search_creative
+    succss = true
+    status = 200
+    images_creative = Factory.search_creative_images(params[:phrase])
+    unless images_creative["result_count"] != 0
+      success = false
+      status = 404
+    end
+    render json: {data:images, success:success},status:status
   end
 end
