@@ -3,8 +3,6 @@ require_relative '../../../factory/factory.rb'
 class Api::V1::ApiController < ApplicationController
   respond_to :json
 
-
-
   # Shows a single image with ID. Example id:635142652
   def show
     success = true
