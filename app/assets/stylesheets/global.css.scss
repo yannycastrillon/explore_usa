@@ -3,6 +3,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
 .field {
  height: 70px;
  width: 250px;
@@ -12,8 +13,8 @@ body {
   font-family: serif;
   color: red;
   font-size: 20px;
-
 }
+
 .footer {
    position:absolute;
    bottom: auto;
@@ -21,13 +22,21 @@ body {
    height: 40px;
    margin: auto;
 }
+
 .footer-nav {
   color: grey;
-
 }
+
 .carousel-inner img {
   margin: auto;
 }
+
 .place {
   color: white;
+}
+
+section {
+    .glyphicon {
+      margin-right: 20px;
+    }
 }

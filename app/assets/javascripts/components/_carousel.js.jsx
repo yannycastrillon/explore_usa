@@ -58,7 +58,6 @@ var Carousel = React.createClass({
           <span className="glyphicon glyphicon-chevron-right"></span>
         </a>
       </div>
-
     )
   }
 })
