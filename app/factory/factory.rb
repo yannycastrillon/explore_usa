@@ -7,7 +7,7 @@ class Factory
   end
 
   def self.search_images(search_term)
-    HTTParty.get("https://api.gettyimages.com/v3/search/images?phrase=#{search_term}",headers:HEADERS)
+    HTTParty.get("https://api.gettyimages.com/v3/search/images?sort_order=best&phrase=#{search_term}",headers:HEADERS)
   end
 
   def self.search_creative_images(search_term)

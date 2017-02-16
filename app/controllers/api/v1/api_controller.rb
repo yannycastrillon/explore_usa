@@ -1,4 +1,4 @@
-require_relative '../../../factory/factory.rb'
+# require_relative '../../../factory/factory.rb'
 
 class Api::V1::ApiController < ApplicationController
   respond_to :json
@@ -35,6 +35,6 @@ class Api::V1::ApiController < ApplicationController
       success = false
       status = 404
     end
-    render json: {data:images, success:success},status:status
+    render json: {data:images_creative, success:success},status:status
   end
 end
