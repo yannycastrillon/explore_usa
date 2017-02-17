@@ -30,9 +30,40 @@ body {
 .carousel-inner img {
   margin: auto;
 }
+.modal-body{
+  .modal-image{
+    margin-top: 10px;
+    height: 220px;
+    img{
+      position: absolute;
+      top: 50%;
+      min-height: 100%;
+      display: block;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      padding-bottom: 4px;
+    }
+  }
+  .modal-details{
 
-.place {
-  color: white;
+  }
+}
+.modal-footer{
+  margin-top: 220px;
+  padding: 10px;
+  button{
+    margin-right: 15px;
+    float:right;
+  }
+  .date-created{
+    float:left;
+    margin: 0px 20px;
+  }
+  .place{
+    float:right;
+    margin: 5px 20px;
+  }
+
 }
 
 section {

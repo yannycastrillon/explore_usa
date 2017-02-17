@@ -2,19 +2,18 @@
 const SingleImage = React.createClass({
 
   modalContent: function(data){
-    var $divModelContent = $("<div id='yanny'>")
-    $divModelContent.append($("p").text(data.artist))
-    $divModelContent.append($("p").text(data.artist_title))
-    $divModelContent.append($("p").text(data.caption))
-    $divModelContent.append($("p").text(data.city))
-    $divModelContent.append($("p").text(data.country))
-    $divModelContent.append($("p").text(data.date_created))
-    $divModelContent.append($("p").text(data.state_province))
+    var $divModelContent = $("<div id='details'>")
+    $divModelContent.append($("<p>").text(data.artist).prepend("<span>Artist: </span>"))
+    $divModelContent.append($("<p>").text(data.artist_title).prepend("<span>Artist Title: </span>"))
+    $divModelContent.append($("<p>").text(data.license_model).prepend("<span>License Model: </span>"))
+    $(".modal-footer").append($("<span class='date-created'>").text( data.date_created))
+    $(".modal-footer").append($("<span class='place'>").text(data.city+"," +data.state_province+" - "+data.country))
+    $divModelContent.append($("<p>").text(data.caption).prepend("<span>Caption: </span>"))
+
     return $divModelContent
   },
 
   handleClick: function(evt) {
-
     evt.preventDefault()
     var imageId = $(evt.target).parent()[0].id
     console.log(imageId);
@@ -23,11 +22,12 @@ const SingleImage = React.createClass({
     $.getJSON("api/v1/images/"+imageId, (response)=>{
       data = response.data.images[0]
       console.log(data);
-      // <DetailImage />
       $('.modal-title').html(data.title)
-      $('.modal-body').html(`<img src="${imgUrl}" />`)
-      $('.modal-body').append(this.modalContent(data))
-      $('.modal').modal()
+      $('.modal-image').html(`<img src="${imgUrl}" />`)
+      $('.modal-details').append(this.modalContent(data))
+      $('.modal').modal({
+        backdrop: 'static'
+      })
     })
   },
 

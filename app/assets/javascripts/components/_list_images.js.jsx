@@ -41,7 +41,7 @@ const ListImages = React.createClass({
         </div>
         <div className="row">
           <div id="search-form" className="col-xs-5">
-            <input onChange={this.validateSearchField} type="text" ref="term" className="form-control " placeholder="Search term" maxLength="20"/><span id="glyphicon-x" aria-hidden="true"></span>
+            <input onChange={this.validateSearchField} type="text" ref="term" className="form-control" placeholder="Search term" maxLength="20"/><span id="glyphicon-x" aria-hidden="true"></span>
             <label><input ref="isCreative" type="checkbox" value="creative"/>Creative images</label>
             <button type="button" className="btn btn-info" onClick={this.handleClick}>Search</button>
           </div>

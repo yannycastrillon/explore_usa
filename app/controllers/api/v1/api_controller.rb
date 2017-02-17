@@ -1,4 +1,3 @@
-# require_relative '../../../factory/factory.rb'
 
 class Api::V1::ApiController < ApplicationController
   respond_to :json

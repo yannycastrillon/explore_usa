@@ -1,5 +1,5 @@
 class Factory
-  FIELDS = "title,artist,artist_title,caption,state_province,city,country,date_created"
+  FIELDS = "title,artist,artist_title,caption,state_province,city,country,date_created,license_model"
   HEADERS = {"Api-Key" => "j878g39yx378pa77djthzzpn"}
 
   def self.find_image(id)
