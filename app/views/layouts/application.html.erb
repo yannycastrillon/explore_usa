@@ -30,6 +30,72 @@
     </div>
   </nav>
 
+  <script type="text/javascript">
+    var myCanvas = document.createElement('canvas')
+    document.body.append(myCanvas)
+    myCanvas.style.background = '#46b8da'
+    myCanvas.width = 1250
+    myCanvas.height = 40
+    ctx = myCanvas.getContext('2d')
+
+    function draw(){
+      ctx.clearRect(0,0, myCanvas.width, myCanvas.height)
+      particles.forEach(function(p){
+        p.update()
+        p.render()
+      })
+      requestAnimationFrame(draw)
+    }
+
+    class Particle{
+      constructor(opts){
+        this.x = opts.x
+        this.y = opts.y
+        this.vx = opts.vx
+        this.vy = opts.vy
+      }
+      render(){
+        ctx.fillStyle = 'white'
+        ctx.fillRect(this.x, this.y, 6, 6)
+      }
+      update(){
+        this.x = this.x + this.vx
+        this.y = this.y + this.vy
+      }
+    }
+
+    class Utils {
+      constructor() {}
+      randomInt(opts){
+        return Math.floor(opts.from + Math.random()*(opts.to - opts.from))
+      }
+      randomFloat(opts){
+        return opts.from + Math.random()*(opts.to - opts.from)
+      }
+    }
+
+    u = new Utils()
+
+    myCanvas.addEventListener('mouseover', function(evt) {
+      for (var i = 0; i < 100; i++) {
+        var dot = new Particle({
+          x: evt.layerX,
+          y: evt.layerY,
+          vx: u.randomFloat({from: -2, to: 2}),
+          vy: u.randomFloat({from: -2, to: 2})
+        })
+        particles.push(dot)
+      }
+    })
+    var firstParticle = new Particle({
+      x: 1250,
+      y: 100,
+      vx: u.randomFloat({from: -2, to: 2}),
+      vy: u.randomFloat({from: -2, to: 2})
+    })
+    var particles = [firstParticle]
+    draw()
+  </script>
 <%= yield %>
 
 
