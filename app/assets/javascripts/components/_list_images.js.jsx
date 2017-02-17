@@ -36,7 +36,6 @@ const ListImages = React.createClass({
   render: function(){
     return(
       <section>
-        
         <div className="row">
           <div id="search-form" className="col-xs-5">
             <input onChange={this.validateSearchField} type="text" ref="term" className="form-control" placeholder="Search term" maxLength="20"/><span id="glyphicon-x" aria-hidden="true"></span>
@@ -51,12 +50,12 @@ const ListImages = React.createClass({
     )
   },
 
-  componentDidMount: function() {
-    setTimeout(function () {
-      console.log('Component mounted');
-
-    }, 1000);
-  },
+  // componentDidMount: function() {
+  //   setTimeout(function () {
+  //     console.log('Component mounted');
+  //
+  //   }, 1000);
+  // },
 
   validateSearchField: function(e){
     if (e.type == "change") {
