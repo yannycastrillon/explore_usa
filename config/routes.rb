@@ -7,9 +7,11 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
+      
+      #api/v1/images/creative?search=newYork
+      get 'images/creative'=>'api#search_creative'
       get 'images/:id' => 'api#show'    # api/v1/images/:id
       get 'images'   => 'api#search'   # api/v1/images?seach=california
-     get 'images/creative'=>'api#search_creative' #api/v1/images/creative?search=newYork
     end
   end
 end
