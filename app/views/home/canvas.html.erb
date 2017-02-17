@@ -5,12 +5,13 @@
     <title>Canvas animation</title>
   </head>
   <body>
+
     <script type="text/javascript">
       var myCanvas = document.createElement('canvas')
       document.body.append(myCanvas)
-      myCanvas.style.background = 'black'
+      myCanvas.style.background = '#46b8da'
       myCanvas.width = 1250
-      myCanvas.height = 100
+      myCanvas.height = 40
       ctx = myCanvas.getContext('2d')
 
       function draw(){
@@ -30,7 +31,7 @@
           this.vy = opts.vy
         }
         render(){
-          ctx.fillStyle = 'gold'
+          ctx.fillStyle = 'white'
           ctx.fillRect(this.x, this.y, 6, 6)
         }
         update(){
