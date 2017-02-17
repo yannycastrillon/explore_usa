@@ -1,15 +1,11 @@
 const Footer = React.createClass({
   render: function(){
     return(
-      <div className="footer">
-        <nav className="navbar navbar-default">
-          <div className="container-fluid">
-            <div className="navbar-header">
-              <h4 className="footer-nav">Powered By: Yanny Castrillon and Nadia Kim</h4>
-            </div>
-          </div>
-        </nav>
-      </div>
+      <footer className="footer">
+        <div className="container-fluid">
+          <h4 className="footer-nav">Powered By: Yanny Castrillon and Nadia Kim</h4>
+        </div>
+      </footer>
     )
   }
 })

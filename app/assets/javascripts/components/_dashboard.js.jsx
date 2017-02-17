@@ -11,8 +11,6 @@ const Dashboard = React.createClass({
       <div>
         <Carousel />
         <ListImages/>
-        <GoogleMap />
-        <Footer />
       </div>
     )
   }
