@@ -9,7 +9,7 @@
 ##Link website
 [https://explore-usa.herokuapp.com/]()
 
-![](/assets/images/app.jpg)
+![](app/assets/images/app.jpg)
 
 ##User Stories:
 * As a user, I want to search for state, city or particular place in the US. Use a search bar for that purpose.
@@ -26,10 +26,10 @@
 * The whole week was about learning how to read the documentations, watching tutorials and videos.
 * Learning to solve merge conflicts
 
-![](/assets/images/initialplan.jpg)
-![](/assets/images/trello.jpg)
-![](/assets/images/homepage.jpg)
-![](/assets/images/pages.jpg)
+![](app/assets/images/initialplan.jpg)
+![](app/assets/images/trello.jpg)
+![](app/assets/images/homepage.jpg)
+![](app/assets/images/pages.jpg)
 
 
 ##Future Development
