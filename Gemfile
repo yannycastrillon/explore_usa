@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.3.1"
 gem 'rails_12factor'
+gem 'rails_serve_static_assets'
 gem 'react-rails'
 gem 'devise'
 gem 'active_model_serializers'
